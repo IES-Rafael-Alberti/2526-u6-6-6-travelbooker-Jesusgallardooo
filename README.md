@@ -17,7 +17,7 @@ Desarrolla una aplicación de consola en Kotlin que permita gestionar **reservas
 La aplicación debe seguir una **arquitectura en capas**, separando claramente:
 - **La capa de presentación (UI):** se encarga de la interacción con el usuario a través de la consola.
 - **La capa de lógica de aplicación:** gestiona la lógica de negocio (creación, almacenamiento y manejo de reservas).
-- **La capa de acceso a datos:** aunque en este ejercicio se puede utilizar un repositorio en memoria, se debe abstraer su acceso mediante interfaces, aplicando el principio de inversión de dependencias.
+- **La capa de acceso a Datos:** aunque en este ejercicio se puede utilizar un repositorio en memoria, se debe abstraer su acceso mediante interfaces, aplicando el principio de inversión de dependencias.
 
 #### **Requerimientos Funcionales y No Funcionales**
 
@@ -79,7 +79,7 @@ La aplicación debe seguir una **arquitectura en capas**, separando claramente:
   - Organiza el proyecto en paquetes (o módulos) que representen cada capa:
     - `presentacion` para la interfaz de usuario.
     - `servicios` (o `aplicacion`) para la lógica de negocio.
-    - `datos` para la implementación del repositorio (en memoria).
+    - `Datos` para la implementación del repositorio (en memoria).
     - `dominio` para definir las clases **Reserva**, **Reserva de Vuelo** y **Reserva de Hotel**.
 
 2. **Implementación del Modelo de Dominio**
@@ -100,7 +100,7 @@ La aplicación debe seguir una **arquitectura en capas**, separando claramente:
 
 4. **Interfaz de Usuario (Consola)**
   - Desarrolla una interfaz de usuario en consola que muestre un menú con las siguientes opciones:
-    - **Opción 1:** Crear nueva reserva (se debe preguntar al usuario si desea crear una Reserva de Vuelo o de Hotel, y solicitar los datos requeridos).
+    - **Opción 1:** Crear nueva reserva (se debe preguntar al usuario si desea crear una Reserva de Vuelo o de Hotel, y solicitar los Datos requeridos).
     - **Opción 2:** Listar todas las reservas registradas, mostrando el detalle (id y descripción) de cada reserva.
   - La capa de presentación debe comunicarse con el servicio para realizar las operaciones solicitadas.
 
