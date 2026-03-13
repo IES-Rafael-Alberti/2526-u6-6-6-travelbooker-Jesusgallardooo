@@ -14,4 +14,8 @@ class ReservaRepositorioMemoria: IReservaRepositorio{
         return reservas.toList()
     }
 
+    override fun eliminar(id: Int) {
+        reservas.removeIf { it.id == id }
+    }
+
 }

@@ -29,6 +29,21 @@ class ServicioReserva (private val repositorio: IReservaRepositorio) {
 
     }
 
+    fun cancelarReserva(id: Int) {
+
+        val reserva = repositorio.obtenerTodas().find { it.id == id }
+
+        if (reserva == null) {
+            throw IllegalArgumentException("No existe una reserva con id $id")
+        }
+
+        repositorio.eliminar(id)
+    }
+
+    fun obtenerReservaPorId(id: Int): Reserva? {
+        return repositorio.obtenerTodas().find { it.id == id }
+    }
+
     fun obtenerTodasLasReservas(): List<Reserva>{
         return repositorio.obtenerTodas()
     }
